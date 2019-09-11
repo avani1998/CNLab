@@ -1,4 +1,4 @@
-#2 simulate the differeetn types of internet traffic sucjh as ftp amd telnet over network and analyze the throughput
+#2 simulate the different types of internet traffic such as ftp and telnet over network and analyze the throughput
 
 
 #create a simulator object 
@@ -6,15 +6,23 @@ set ns  [new Simulator]
 
 #set up trace file
 set tracefile [open 2.tr w]
-$ns trace-all 4traceFile
+$ns trace-all $traceFile
 set namFile [open 2.nam w]
+$ns namtrace-all $namFile
 
-
-
-
-
-
-
+proc finish{} {
+    gloabal ns namFile traceFile
+    
+    $ns flush-trace
+    
+    #close the trace files 
+    close $traceFile
+    close $namFile
+        exec awk -f Second.awk 2.tr & 
+        exec nam 2.nam &
+        
+        exit 0
+}
 
 #create 4 nodes
 for {set i 0} {$i<4} {incr i}{
@@ -31,21 +39,21 @@ $ns duplex-link $n(0) $n(2) 2Mb 10ms DropTail
 $ns queue-limit $n(0) $n(2) 10
 
 
-#set tcp telnet
+#set TCP TELNET connectiin between n(0) and n(3)
 set tcp0 [new Agent/TCP]
 $ns attach-agent $n(0) $tcp0
 set sink0 [new Agent/TCPSink]
-$ns attach-agent $n(3) $sink
+$ns attach-agent $n(3) $sink0
 $ns connect $tcp0 $sink0
 
 #attach telnet applicatiobn over tcp
 set telent [new Application/Telnet]
 $telnet attach-agent $tcp0
-$telnet aet interval 0
+$telnet set interval 0
 
-#ftp set type _FTP
+#ftp0 set type_FTP
 
-#set tcp ftp connection between n(1) and n(3)
+#set TCP FTP connection between n(1) and n(3)
 set tcp1 [new Agent/TCP]
 $ns atach-agent $n(1) $tcp1
 set sink1 [new Agent/TCPSink]
@@ -66,4 +74,3 @@ $ns at 25.0 "finish"
 
 #run simulation 
 $ns run
-
