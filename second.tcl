@@ -5,7 +5,7 @@
 set ns  [new Simulator]
 
 #set up trace file
-set tracefile [open 2.tr w]
+set traceFile [open 2.tr w]
 $ns trace-all $traceFile
 set namFile [open 2.nam w]
 $ns namtrace-all $namFile
@@ -25,7 +25,7 @@ proc finish{} {
 }
 
 #create 4 nodes
-for {set i 0} {$i<4} {incr i}{
+for {set i 0} {$i<4} {incr i} {
 	set n($i) [$ns node]
 }
 
@@ -47,15 +47,15 @@ $ns attach-agent $n(3) $sink0
 $ns connect $tcp0 $sink0
 
 #attach telnet applicatiobn over tcp
-set telent [new Application/Telnet]
+set telnet [new Application/Telnet]
 $telnet attach-agent $tcp0
-$telnet set interval 0
+$telnet set interval_ 0
 
 #ftp0 set type_FTP
 
 #set TCP FTP connection between n(1) and n(3)
 set tcp1 [new Agent/TCP]
-$ns atach-agent $n(1) $tcp1
+$ns attach-agent $n(1) $tcp1
 set sink1 [new Agent/TCPSink]
 $ns attach-agent $n(3) $sink1
 $ns connect $tcp1 $sink1
