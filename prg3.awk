@@ -44,12 +44,14 @@ BEGIN{
 	}
 }
 END{
-	totalSent = TCPsent + UDPSent;
-	totalLost= TCPLost+UDPLost;
+	totalSent = TCPSent + UDPSent;
+	totalLost= TCPLost + UDPLost;
 	printf("Total TCP packets sent are %d\n", TCPSent);
 	printf("Total TCP packets recieved are %d\n", TCPRecieved);
 	printf("Total TCP packets dropped are %d\n", TCPLost);
 	printf("Total UDP packets sent are %d\n", UDPSent);
 	printf("Total UDP packets recieved are %d\n", UDPRecieved);
 	printf("Total UDP packets dropped are %d\n", UDPLost);
+	printf("Total sent are %d\n", totalSent);
+	printf("Total dropped are %d\n", totalLost);
 }
