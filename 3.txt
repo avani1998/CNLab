@@ -4,3 +4,5 @@ Total TCP packets dropped are 0
 Total UDP packets sent are 3200
 Total UDP packets recieved are 3186
 Total UDP packets dropped are 14
+Total sent are 3643
+Total dropped are 14
