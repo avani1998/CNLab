@@ -1,3 +1,5 @@
+#Simulate three node point to point network with duplex links between them.Set the queue size and vary the bandwidth and
+#find the number of packets dropped.
 #create a simulator object
 set ns  [new Simulator]
 $ns color 2 red
