@@ -1,0 +1,51 @@
+packet[0]:30 bytes	
+packet[1]:10 bytes	
+packet[2]:10 bytes	
+packet[3]:50 bytes	
+packet[4]:30 bytes	
+packet[5]:50 bytes	
+packet[6]:10 bytes	
+packet[7]:20 bytes	
+packet[8]:30 bytes	
+packet[9]:10 bytes	
+Enter the Output rate:10
+Enter the Bucket Size:15
+
+
+Incoming packet size (30bytes) is Greater than bucket capacity (15bytes)-PACKET REJECTED
+
+Incoming Packet size: 10
+Bytes remaining to Transmit: 10
+Time left for transmission: 20 units
+Packet of size 10 Transmitted----Bytes Remaining to Transmit: 0
+Time left for transmission: 0 units
+No packets to transmit!!
+
+Incoming Packet size: 10
+Bytes remaining to Transmit: 10
+Time left for transmission: 30 units
+Packet of size 10 Transmitted----Bytes Remaining to Transmit: 0
+Time left for transmission: 10 units
+No packets to transmit!!
+Time left for transmission: 0 units
+No packets to transmit!!
+
+Incoming packet size (50bytes) is Greater than bucket capacity (15bytes)-PACKET REJECTED
+
+Incoming packet size (30bytes) is Greater than bucket capacity (15bytes)-PACKET REJECTED
+
+Incoming packet size (50bytes) is Greater than bucket capacity (15bytes)-PACKET REJECTED
+
+Incoming Packet size: 10
+Bytes remaining to Transmit: 10
+Time left for transmission: 10 units
+Packet of size 10 Transmitted----Bytes Remaining to Transmit: 0
+
+Incoming packet size (20bytes) is Greater than bucket capacity (15bytes)-PACKET REJECTED
+
+Incoming packet size (30bytes) is Greater than bucket capacity (15bytes)-PACKET REJECTED
+
+Incoming Packet size: 10
+Bytes remaining to Transmit: 10
+Time left for transmission: 10 units
+Packet of size 10 Transmitted----Bytes Remaining to Transmit:
