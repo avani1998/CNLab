@@ -1,0 +1,19 @@
+sem5a@iselab1:~$ ./a.out
+Enter the number of elements
+5
+Enter the adjacency matrix
+1 0 1 0 1
+0 0 0 0 0
+1 0 1 1 0
+1 0 0 0 0 
+1 1 1 1 1
+Enter the starting node
+1
+
+Shortest path from 1 to 2 => 0
+
+Shortest path from 1 to 3 => 0
+
+Shortest path from 1 to 4 => 0
+
+Shortest path from 1 to 5 => 0
