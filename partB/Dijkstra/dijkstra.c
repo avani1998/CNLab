@@ -1,17 +1,3 @@
-Aishwarya Sheelvant
-	
-2:55 PM (8 minutes ago)
-	
-to me
-
-
----------- Forwarded message ---------
-From: bhoomika chandrashekar <bhoomi.chandrashekar@gmail.com>
-Date: Thu, Nov 21, 2019 at 2:46 PM
-Subject: dijkstra
-To: <anaghayadav279@gmail.com>, <Aishwaryavs12@gmail.com>, Akhila Raj <akhilaraj474@gmail.com>, <aishwaryamanikarnike@gmail.com>
-
-
 #include<stdio.h>
 #include<stdlib.h>
 #define max 10
